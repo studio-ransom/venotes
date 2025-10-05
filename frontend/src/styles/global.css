@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-discord-dark;
+  }
+  
+  body {
+    @apply bg-discord-darkest text-discord-lighter font-sans;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #app {
+    @apply h-full w-full;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-discord-blue hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-discord-darker hover:bg-discord-dark text-discord-lighter px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .input-field {
+    @apply bg-discord-darker border border-discord-dark text-discord-lighter px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-discord-blue;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center px-3 py-2 text-discord-light hover:bg-discord-dark hover:text-white rounded-md cursor-pointer transition-colors;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-discord-blue text-white;
+  }
+  
+  .log-entry {
+    @apply p-3 border-b border-discord-dark hover:bg-discord-darker transition-colors;
+  }
+}
